@@ -4,6 +4,7 @@
   form {
     animation: fade 2s;
     position: relative;
+
     div {
       display: flex;
       flex-direction: column;
@@ -74,6 +75,7 @@
 
       p {
         text-align: center;
+
         a {
           color: c.$blue;
         }
@@ -87,14 +89,17 @@
     form {
       display: flex;
       justify-content: center;
+
       img {
         width: 80%;
       }
+
       div {
         input {
           height: 25px;
           width: 150px;
         }
+
         label {
           font-size: .8rem;
         }
@@ -102,6 +107,7 @@
 
       #register {
         left: 35%;
+
         h2 {
           font-size: 1rem;
         }
@@ -113,6 +119,7 @@
           height: 25px;
           font-size: .7rem;
         }
+
         p {
           font-size: .7rem;
         }
@@ -127,11 +134,13 @@
       img {
         width: 100%;
       }
+
       div {
         input {
           height: 20px;
           width: 130px;
         }
+
         label {
           font-size: .7rem;
         }
@@ -139,6 +148,7 @@
 
       #register {
         left: 27%;
+
         h2 {
           font-size: 1rem;
         }

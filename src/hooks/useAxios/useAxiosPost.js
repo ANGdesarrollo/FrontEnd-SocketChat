@@ -23,7 +23,6 @@ export const useAxiosPost = ( url ) => {
                 } );
             } )
             .catch( ( error ) => {
-                console.log('entre al catch', error)
                 setStatePost( {
                     data: null,
                     isLoading: false,

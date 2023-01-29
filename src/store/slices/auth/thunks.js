@@ -10,7 +10,6 @@ export const getAuth = () => {
 
 export const onLogout = () => {
     return async ( dispatch ) => {
-        console.log( 'me llamaron' )
         const { data } = await chatApi.delete( '/logout' );
         dispatch( logout( { status: !data.status, username: data.username } ) )
     }
