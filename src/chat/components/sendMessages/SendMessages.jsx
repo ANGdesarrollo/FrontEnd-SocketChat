@@ -40,7 +40,8 @@ export const SendMessages = ( { handleSubmit, onSubmit, username, register } ) =
                             <button ref={ refButton } type="submit">
                                 <img
                                     src="https://res.cloudinary.com/dwz16rstr/image/upload/v1674156478/chat/button_ngxa8w.png"
-                                    alt="sned-message"/></button>
+                                    alt="sned-message"/>
+                            </button>
                         </div>
                     </div>
                 </form>
