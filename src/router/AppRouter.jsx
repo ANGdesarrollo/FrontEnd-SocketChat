@@ -8,6 +8,8 @@ import { PublicRoute } from "./publicRoute/PublicRoute";
 import { useDispatch } from "react-redux";
 import { getAuth } from "../store/slices/auth/index.js";
 import { SocketsProvider } from "../chat/context/SocketProvider";
+import { CheckerRoute } from "./checkerRoute/CheckerRoute";
+import { Checker } from "../components/checker/Checker";
 
 
 export const AppRouter = () => {
@@ -17,9 +19,16 @@ export const AppRouter = () => {
         dispatch( getAuth() )
     }, [] );
 
+    console.log('me renderice')
+
     return (
         <SocketsProvider>
             <Routes>
+
+                <Route element={<CheckerRoute/>}>
+                    <Route path="/" element={<Checker/>}></Route>
+                </Route>
+
                 <Route element={ <PublicRoute/> }>
                     <Route path="/login" element={ <LoginContainer/> }></Route>
                     <Route path="/register" element={ <RegisterContainer/> }></Route>

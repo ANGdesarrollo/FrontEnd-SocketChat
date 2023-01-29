@@ -12,10 +12,12 @@ export const authSlice = createSlice( {
         checkAuthState: ( state, action ) => {
             state.status = action.payload.status
             state.username = action.payload.username
+            state.done = true
         },
         setAuthState: ( state, action ) => {
             state.status = action.payload.status
             state.username = action.payload.username
+            state.done = true
         },
         logout: (state, action) => {
             state.status = action.payload.status

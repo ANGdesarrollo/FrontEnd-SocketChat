@@ -2,10 +2,13 @@ import { Navigate, Outlet } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
 export const PrivateRoute = () => {
+    const { status, done } = useSelector( state => state.auth );
 
-    const { status } = useSelector( state => state.auth );
+    if(!done) {
+        return <Navigate to="/"/>
+    }
 
-    if ( !status ) {
+    if(!status) {
         return <Navigate to="/register"/>
     }
 
