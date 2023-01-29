@@ -18,7 +18,7 @@ export const RegisterLayout = ( { handleSubmit, onSubmit, register, errors, vali
                     alt="background"/>
                 <div id="username">
                     <label htmlFor="username">Email</label>
-                    <input defaultValue="test" type="email" name="username" { ...register( "username", {
+                    <input type="email" name="username" { ...register( "username", {
                         required: true,
                         pattern: validateEmail
                     } ) }/>
