@@ -19,8 +19,6 @@ export const AppRouter = () => {
         dispatch( getAuth() )
     }, [] );
 
-    console.log('me renderice')
-
     return (
         <SocketsProvider>
             <Routes>
