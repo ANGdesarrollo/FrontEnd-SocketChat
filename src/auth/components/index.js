@@ -1,2 +1,2 @@
-export * from './circles/Circles';
+export * from '../../components/circles/Circles';
 export * from './menuAuth/MenuAuth';

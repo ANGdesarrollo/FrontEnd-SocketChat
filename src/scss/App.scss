@@ -4,7 +4,7 @@
 @use '../ui/background/background';
 // Components
 @use '../auth/components/menuAuth/menuAuth';
-@use '../auth/components/circles/circles';
+@use 'src/components/circles/circles';
 @use '../components/successMessage/successMessage';
 // Auth
 @use 'src/auth/auth';

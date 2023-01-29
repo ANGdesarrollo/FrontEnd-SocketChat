@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch } from "react-redux";
 import { setAuthState } from "../../store/slices/auth/index.js";
+import { Circles } from "../../auth/components";
 
 const imgSuccessChat = 'https://res.cloudinary.com/dwz16rstr/image/upload/v1674677550/chat/CheckingChat_lwxun1.png';
 const imgSuccessRegister = 'https://res.cloudinary.com/dwz16rstr/image/upload/v1674677550/chat/SuccessRegister_wnxz8x.png';
@@ -28,6 +29,7 @@ export const SuccessMessage = ( { path, data } ) => {
     return (
         <div className="container">
             <img className="space-rocket" src={ image } alt="Rocket space"/>
+            <Circles/>
         </div>
     );
 };
