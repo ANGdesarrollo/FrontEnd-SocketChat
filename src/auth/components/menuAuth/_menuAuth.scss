@@ -8,26 +8,66 @@
   position: fixed;
   bottom: 3%;
   left: 3%;
+
   nav {
     padding: 0 1em;
     width: 70%;
     display: flex;
     justify-content: space-around;
+
     li:hover {
       background-color: c.$white;
+
       a {
         color: black;
       }
     }
+
     li {
       padding: 0 .5em;
       transition: all 500ms linear;
       list-style: none;
+
       a {
         transition: all 500ms linear;
         color: c.$white;
         text-decoration: none;
       }
     }
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .menu {
+    img {
+      width: 80%;
+    }
+
+    align-items: center;
+
+    nav {
+      width: 60%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .menu {
+    img {
+      width: 100%;
+    }
+
+    nav {
+      width: 100%;
+
+      li {
+        a {
+          font-size: .7rem;
+        }
+      }
+    }
+
   }
 }

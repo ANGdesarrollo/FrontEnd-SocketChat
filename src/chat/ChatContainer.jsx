@@ -4,6 +4,7 @@ import { useWindowSize } from "react-use";
 import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
 import { SocketContext } from "./context/SocketContext.jsx";
+import { MenuChat } from "./components/menuChat/MenuChat";
 
 const imageDesktop = 'https://res.cloudinary.com/dwz16rstr/image/upload/v1674147322/chat/chatBox_wfisdy.png';
 const imageMobile = 'https://res.cloudinary.com/dwz16rstr/image/upload/v1674222499/chat/VerticalChatBox_pubhzi.png';
@@ -41,6 +42,7 @@ export const ChatContainer = () => {
                 username={ username }
                 register={ register }
             />
+            <MenuChat/>
         </div>
 
 
