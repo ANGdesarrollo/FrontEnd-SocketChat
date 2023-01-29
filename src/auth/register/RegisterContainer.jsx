@@ -10,7 +10,10 @@ export const RegisterContainer = () => {
 
     const { password, repeatPassword } = getValues();
 
-    const validateEqualPasswords = () => password === repeatPassword;
+    const validateEqualPasswords = () => {
+        console.log('entre')
+        return password === repeatPassword
+    };
 
     const onSubmit = ( { username, password } ) => {
         chatApiPost( { username, password } )
