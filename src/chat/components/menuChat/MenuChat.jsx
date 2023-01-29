@@ -14,8 +14,8 @@ export const MenuChat = () => {
     return (
         <div className="menu">
             <nav>
-                <li><a href="src/auth/components/menuAuth/MenuAuth.jsx#">SOUND: { templateSound }</a></li>
-                <li><a href="src/auth/components/menuAuth/MenuAuth.jsx#">THEME: DARK</a></li>
+                <li><a href="#">SOUND: { templateSound }</a></li>
+                <li><a href="#">THEME: DARK</a></li>
                 <li><a target="_blank" href={ linkedin }>CONTACT ME</a></li>
                 <li id="logout" onClick={ () => dispatch( onLogout() ) }><a>LOGOUT</a></li>
             </nav>
