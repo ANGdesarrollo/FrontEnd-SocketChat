@@ -1,0 +1,15 @@
+// General Config.
+@use './base/general-container';
+// Background Video
+@use '../ui/background/background';
+// Components
+@use '../auth/components/menuAuth/menuAuth';
+@use '../auth/components/circles/circles';
+@use '../components/successMessage/successMessage';
+// Auth
+@use 'src/auth/auth';
+// Chat
+@use '../chat/components/sendMessages/sendMessages';
+@use '../chat/components/showMessages/showMessages';
+@use '../chat/components/menuChat/menuChat';
+@use '../chat/chatContainer';

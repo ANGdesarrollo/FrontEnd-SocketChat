@@ -1,0 +1,33 @@
+@use 'src/scss/abstracts/vars' as c;
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 3%;
+  left: 3%;
+  nav {
+    padding: 0 1em;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    li:hover {
+      background-color: c.$white;
+      a {
+        color: black;
+      }
+    }
+    li {
+      padding: 0 .5em;
+      transition: all 500ms linear;
+      list-style: none;
+      a {
+        transition: all 500ms linear;
+        color: c.$white;
+        text-decoration: none;
+      }
+    }
+  }
+}

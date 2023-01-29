@@ -1,0 +1,150 @@
+@use 'src/scss/abstracts/vars' as c;
+
+.container-sendMsg {
+  display: flex;
+  padding: 0 0 0 15%;
+  .sub-container-sendMsg {
+    width: 100%;
+    form {
+      width: 40%;
+      div {
+        width: fit-content;
+        position: relative;
+        .container-img {
+          max-width: 400px;
+          width: 100%;
+          min-width: 100px;
+          max-height: 100%;
+        }
+        input {
+          background-color: transparent;
+          color: c.$white-transparent;
+          padding: .3em;
+          border: 0.5px solid c.$white-transparent;
+        }
+
+        textarea {
+          background-color: transparent;
+          color: c.$white;
+          padding: .3em;
+          border: 0.5px solid c.$white-transparent;
+          height: 100%;
+        }
+
+        .form-user {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 10%;
+          left: 15%;
+        }
+
+        .textarea-message {
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 27%;
+          left: 15%;
+          height: 48%;
+
+        }
+
+        .button-send {
+          background-color: transparent;
+          position: absolute;
+          bottom: 10%;
+          left: 82%;
+          button {
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            img {
+              width: 2rem;
+            }
+          }
+          button:hover {
+            transform: translateY(1px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .container-sendMsg {
+    .sub-container-sendMsg {
+      form {
+        width: 30%;
+        div {
+          .form-user {
+            top: 10%;
+            left: 15%;
+          }
+
+          .textarea-message {
+            top: 30%;
+          }
+
+          .button-send {
+            bottom: 5%;
+            left: 82%;
+            button {
+              img {
+                width: 1.5rem;
+              }
+            }
+            button:hover {
+              transform: translateY(1px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container-sendMsg {
+    margin-top: 1%;
+    .sub-container-sendMsg {
+      form {
+        width: 50%;
+        div {
+          .form-user {
+            top: 10%;
+            left: 15%;
+          }
+
+          .textarea-message {
+            top: 30%;
+          }
+
+          .button-send {
+            bottom: 5%;
+            left: 82%;
+            button {
+              img {
+                width: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container-sendMsg {
+    padding: 0;
+    .sub-container-sendMsg {
+      display: flex;
+      justify-content: center;
+      form {
+        width: 90%;
+      }
+    }
+  }
+}

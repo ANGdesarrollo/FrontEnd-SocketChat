@@ -1,0 +1,147 @@
+@use 'src/scss/abstracts/vars' as c;
+
+.container {
+  form {
+    position: relative;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input {
+        background-color: c.$background-input;
+        border: none;
+        height: 30px;
+        width: 200px;
+      }
+    }
+
+    #register {
+      position: absolute;
+      top: 2.5%;
+      left: 25%;
+
+      h2 {
+        font-weight: 400;
+      }
+    }
+
+    #username {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 15%;
+    }
+
+    #password {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 30%;
+    }
+
+    #repeat-password {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 48%;
+    }
+
+    #go-login {
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      top: 75%;
+      display: flex;
+      justify-content: center;
+
+
+      button {
+        width: 80%;
+        cursor: pointer;
+        background-color: c.$blue;
+        border: none;
+        height: 25px;
+        color: c.$white;
+        margin-bottom: 1rem;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      button:hover {
+        transform: translateY(1px);
+      }
+
+      p {
+        text-align: center;
+        a {
+          color: c.$blue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    form {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 80%;
+      }
+      div {
+        input {
+          height: 25px;
+          width: 150px;
+        }
+        label {
+          font-size: .8rem;
+        }
+      }
+
+      #register {
+        left: 35%;
+        h2 {
+          font-size: 1rem;
+        }
+      }
+
+      #go-login {
+        button {
+          width: 60%;
+          height: 25px;
+          font-size: .7rem;
+        }
+        p {
+          font-size: .7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    form {
+      img {
+        width: 100%;
+      }
+      div {
+        input {
+          height: 20px;
+          width: 130px;
+        }
+        label {
+          font-size: .7rem;
+        }
+      }
+
+      #register {
+        left: 27%;
+        h2 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

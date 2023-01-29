@@ -1,0 +1,107 @@
+@use 'src/scss/abstracts/vars' as c;
+
+.container-chat {
+  .chatBox-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .chatBox-subContainer {
+      width: 65%;
+      max-width: 1000px;
+      height: fit-content;
+      img {
+        max-width: 100%;
+        width: 100%;
+        min-width: 100px;
+        max-height: 100%;
+      }
+      position: relative;
+      .chatBox {
+        height: 50%;
+        border: 1px solid c.$white;
+        padding: 1rem;
+        overflow-y: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        .date {
+          color: c.$pink;
+          margin-right: 1rem;
+        }
+        p {
+          padding: .2rem;
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 0.2em;
+        background-color: #87CEFA;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      @supports (scrollbar-color: c.$white c.$background-input) {
+        * {
+          scrollbar-color: c.$white c.$background-input;
+          scrollbar-width: thin;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .container-chat {
+    .chatBox-container {
+      .chatBox-subContainer {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container-chat {
+    .chatBox-container {
+      height: 60%;
+      .chatBox-subContainer {
+        height: 100%;
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container-chat {
+    .chatBox-container {
+      height: 60%;
+
+      .chatBox-subContainer {
+        height: 100%;
+        width: 90%;
+
+        .chatBox {
+          height: 70%;
+          border: 0.5px solid c.$white-transparent;
+          padding: .5rem;
+          width: 75%;
+
+          .date {
+            color: c.$pink;
+            margin-right: .5rem;
+          }
+
+          p {
+            font-size: .7rem;
+            padding: .2rem;
+          }
+        }
+      }
+    }
+  }
+}
