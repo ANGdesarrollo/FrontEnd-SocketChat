@@ -31,10 +31,9 @@ export const RegisterLayout = ( { handleSubmit, onSubmit, register, errors, vali
                     <input type="password" name="password" { ...register( "password", {
                         required: true,
                         minLength: 3,
-                        validate: validateEqualPasswords
                     } ) }/>
                     { errors.password?.type === 'minLength' && <p>Password is too short!</p> }
-                    { errors.password && <p>Passwords must match!</p> }
+                    { validateEqualPasswords && <p>Passwords must match!</p> }
                 </div>
                 <div id="repeat-password">
                     <label htmlFor="repeat-password">Repeat Password</label>
