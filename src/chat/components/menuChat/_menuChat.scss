@@ -81,6 +81,8 @@
 @media screen and (max-width: 576px) {
   .container-chat {
     .menu {
+      margin-top: 2rem;
+      position: inherit;
       img {
         width: 100%;
       }

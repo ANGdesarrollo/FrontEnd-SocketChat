@@ -5,16 +5,13 @@ import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
 import { SocketContext } from "./context/SocketContext.jsx";
 import { MenuChat } from "./components/menuChat/MenuChat";
-
-const imageDesktop = 'https://res.cloudinary.com/dwz16rstr/image/upload/v1674147322/chat/chatBox_wfisdy.png';
-const imageMobile = 'https://res.cloudinary.com/dwz16rstr/image/upload/v1674222499/chat/VerticalChatBox_pubhzi.png';
+import { data } from "./data/data.js";
 
 export const ChatContainer = () => {
-    const [ image, setImage ] = useState( '' );
-    const { width } = useWindowSize();
     const { handleSubmit, register, control } = useForm();
     const { username } = useSelector( state => state.auth );
     const { sendMessage } = useContext( SocketContext );
+    const { chatBoxImg } = data();
 
     const handleKeyPress = ( e, ref ) => {
         if ( e.key === 'Enter' && !e.shiftKey ) {
@@ -32,16 +29,11 @@ export const ChatContainer = () => {
         e.target.reset();
     }
 
-    useEffect( () => {
-        if ( width > 992 ) setImage( imageDesktop );
-        if ( width < 992 ) setImage( imageMobile );
-    }, [ width ] );
-
     return (
 
         <div className="container-chat">
             <ShowMessages
-                image={ image }
+                image={ chatBoxImg }
             />
             <SendMessages
                 handleKeyPress={ handleKeyPress }

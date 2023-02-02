@@ -1,16 +1,11 @@
 @use '../../scss/abstracts/vars' as c;
 
-.active-designed {
-  bottom: 5%!important;
-  right: 2%!important;
-}
-
 .designed {
   display: flex;
   align-items: center;
   position: fixed;
-  bottom: -100%;
-  right: -100%;
+  top: 3%;
+  left: 1%;
   transition: 2s linear;
 
   img {
@@ -27,5 +22,13 @@
     a {
       text-decoration-color: c.$white;
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .designed {
+    top:0;
+    left: 1%;
+
   }
 }
