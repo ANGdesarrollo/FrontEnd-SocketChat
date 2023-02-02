@@ -5,7 +5,7 @@ import { useTheme } from "../../../hooks/useTheme/useTheme.js";
 export const SendMessages = ( { handleSubmit, onSubmit, username, register, handleKeyPress } ) => {
     const refButton = useRef( null );
     const refMessage = useRef( null )
-    const { sendBoxImg } = data();
+    const { sendBoxImg, sendMsg } = data();
     const ref = useRef( null )
     const { animationTheme, theme } = useTheme()
 
@@ -14,9 +14,9 @@ export const SendMessages = ( { handleSubmit, onSubmit, username, register, hand
     }, [ theme ] );
 
     useEffect( () => {
-        document.addEventListener( 'keydown', (e) => handleKeyPress(e, refButton), true );
+        document.addEventListener( 'keydown', ( e ) => handleKeyPress( e, refButton ), true );
         return () => {
-            document.removeEventListener( 'keydown',(e) => handleKeyPress(e, refButton), true );
+            document.removeEventListener( 'keydown', ( e ) => handleKeyPress( e, refButton ), true );
         }
     }, [] );
 
@@ -29,7 +29,7 @@ export const SendMessages = ( { handleSubmit, onSubmit, username, register, hand
                              src={ sendBoxImg }
                              alt="chat fondo"/>
                         <div className="form-user">
-                            <label htmlFor="user">User</label>
+                            <label style={{color: "white"}} htmlFor="user">User</label>
                             <input value={ username } id="user" type="text" disabled={ true }/>
                         </div>
                         <div className="textarea-message">
@@ -40,7 +40,7 @@ export const SendMessages = ( { handleSubmit, onSubmit, username, register, hand
                         <div className="button-send">
                             <button ref={ refButton } type="submit">
                                 <img
-                                    src="https://res.cloudinary.com/dwz16rstr/image/upload/v1674156478/chat/button_ngxa8w.png"
+                                    src={ sendMsg }
                                     alt="sned-message"/>
                             </button>
                         </div>
