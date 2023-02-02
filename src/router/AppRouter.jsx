@@ -10,6 +10,7 @@ import { getAuth } from "../store/slices/auth/index.js";
 import { SocketsProvider } from "../chat/context/SocketProvider";
 import { CheckerRoute } from "./checkerRoute/CheckerRoute";
 import { Checker } from "../components/checker/Checker";
+import { handleLocalStorage } from "../store/slices/theme/index.js";
 
 
 export const AppRouter = () => {
@@ -17,6 +18,7 @@ export const AppRouter = () => {
 
     useEffect( () => {
         dispatch( getAuth() )
+        dispatch(handleLocalStorage())
     }, [] );
 
     return (

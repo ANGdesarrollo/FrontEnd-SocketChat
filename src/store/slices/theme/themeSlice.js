@@ -11,13 +11,21 @@ export const themeSlice = createSlice( {
             switch ( state.theme ) {
                 case "Dark":
                     state.theme = 'Light'
+                    localStorage.setItem('theme', 'Light')
                     break
                 case "Light":
                     state.theme = 'Dark'
+                    localStorage.setItem('theme', 'Dark')
                     break
+            }
+        },
+        handleLocalStorage: (state) => {
+            const data = localStorage.getItem('theme');
+            if(data) {
+                state.theme = data;
             }
         }
     }
 } );
 
-export const { handleTheme } = themeSlice.actions;
+export const { handleTheme, handleLocalStorage } = themeSlice.actions;
