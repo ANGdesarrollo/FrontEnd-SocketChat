@@ -12,6 +12,7 @@
     "@reduxjs/toolkit": "^1.9.1",
     "@uiball/loaders": "^1.2.6",
     "axios": "^1.2.4",
+    "gsap": "^3.11.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.42.1",

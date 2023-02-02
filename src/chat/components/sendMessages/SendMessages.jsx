@@ -1,31 +1,32 @@
 import React, { useEffect, useRef } from 'react';
+import { data } from "../../data/data.js";
+import { useTheme } from "../../../hooks/useTheme/useTheme.js";
 
-export const SendMessages = ( { handleSubmit, onSubmit, username, register } ) => {
-
+export const SendMessages = ( { handleSubmit, onSubmit, username, register, handleKeyPress } ) => {
     const refButton = useRef( null );
     const refMessage = useRef( null )
-
-    const handleKeyPress = ( e ) => {
-        if ( e.key === 'Enter' && !e.shiftKey ) {
-            e.preventDefault()
-            refButton.current.click();
-        }
-    }
+    const { sendBoxImg } = data();
+    const ref = useRef( null )
+    const { animationTheme, theme } = useTheme()
 
     useEffect( () => {
-        document.addEventListener( 'keydown', handleKeyPress, true );
+        animationTheme( ref )
+    }, [ theme ] );
+
+    useEffect( () => {
+        document.addEventListener( 'keydown', (e) => handleKeyPress(e, refButton), true );
         return () => {
-            document.removeEventListener( 'keydown', handleKeyPress, true );
+            document.removeEventListener( 'keydown',(e) => handleKeyPress(e, refButton), true );
         }
     }, [] );
 
     return (
-        <div className="container-sendMsg">
+        <div ref={ ref } className="container-sendMsg">
             <div className="sub-container-sendMsg">
-                <form onSubmit={ handleSubmit(onSubmit) }>
+                <form onSubmit={ handleSubmit( onSubmit ) }>
                     <div>
                         <img className="container-img"
-                             src="https://res.cloudinary.com/dwz16rstr/image/upload/v1674147317/chat/SendMessage_vx0rtu.png"
+                             src={ sendBoxImg }
                              alt="chat fondo"/>
                         <div className="form-user">
                             <label htmlFor="user">User</label>

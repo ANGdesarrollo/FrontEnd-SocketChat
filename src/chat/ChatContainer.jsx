@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { SendMessages, ShowMessages } from "./components/index.js";
 import { useWindowSize } from "react-use";
 import { useForm } from "react-hook-form";
@@ -15,6 +15,13 @@ export const ChatContainer = () => {
     const { handleSubmit, register, control } = useForm();
     const { username } = useSelector( state => state.auth );
     const { sendMessage } = useContext( SocketContext );
+
+    const handleKeyPress = ( e, ref ) => {
+        if ( e.key === 'Enter' && !e.shiftKey ) {
+            e.preventDefault()
+            ref.current.click();
+        }
+    }
 
     const onSubmit = ( data, e ) => {
         const message = {
@@ -37,6 +44,7 @@ export const ChatContainer = () => {
                 image={ image }
             />
             <SendMessages
+                handleKeyPress={ handleKeyPress }
                 handleSubmit={ handleSubmit }
                 onSubmit={ onSubmit }
                 username={ username }

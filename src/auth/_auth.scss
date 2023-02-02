@@ -11,7 +11,6 @@
       align-items: center;
 
       input {
-        background-color: c.$background-input;
         border: none;
         height: 30px;
         width: 200px;
@@ -61,10 +60,8 @@
       button {
         width: 80%;
         cursor: pointer;
-        background-color: c.$blue;
         border: none;
         height: 25px;
-        color: c.$white;
         margin-bottom: 1rem;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
       }
