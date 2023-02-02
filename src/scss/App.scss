@@ -3,15 +3,17 @@
 // Background Video
 @use '../ui/background/background';
 // Components
-@use '../auth/components/menuAuth/menuAuth';
-@use 'src/components/circles/circles';
+@use '../components/circles/circles';
 @use '../components/successMessage/successMessage';
+@use '../components/music/audio';
+@use '../components/designedBy/designed';
 // Auth
 @use 'src/auth/auth';
+@use '../auth/components/menuAuth/menuAuth';
 // Chat
 @use '../chat/components/sendMessages/sendMessages';
 @use '../chat/components/showMessages/showMessages';
 @use '../chat/components/menuChat/menuChat';
 @use '../chat/chatContainer';
 //Audio
-@use '../components/music/audio';
+

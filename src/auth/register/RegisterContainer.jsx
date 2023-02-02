@@ -5,7 +5,7 @@ import { SuccessMessage } from "../../components/successMessage/SuccessMessage.j
 import { useState } from "react";
 
 export const RegisterContainer = () => {
-    const { handleSubmit, register, formState: { errors }, getValues } = useForm();
+    const { handleSubmit, register, formState: { errors } } = useForm();
     const { chatApiPost, statePost } = useAxiosPost( '/register' );
     const [ checkPassword, setCheckPassword ] = useState( false );
     const { data } = statePost;
