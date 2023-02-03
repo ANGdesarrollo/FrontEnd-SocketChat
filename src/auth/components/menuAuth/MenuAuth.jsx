@@ -10,18 +10,17 @@ const linkedin = 'https://www.linkedin.com/in/alexis-graff-front-end';
 export const MenuAuth = () => {
     const { theme } = useSelector( state => state.theme );
     const { isPlaying } = useSelector( state => state.song );
-    const { letterMenu } = useTheme()
     const dispatch = useDispatch();
-
+    let letterMenu = theme === 'Dark' ? 'white' : 'blue'
     let templateSound = isPlaying ? 'ON' : 'OFF';
     let themeActive = theme === 'Dark' ? 'DARK' : 'LIGHT';
 
     return (
         <div className="menu">
             <nav>
-                <li><a style={{color: letterMenu}} onClick={ () => dispatch( handleSong() ) } href="#">SOUND: { templateSound }</a></li>
-                <li onClick={ () => dispatch( handleTheme() ) }><a style={{color: letterMenu}} href="#">THEME: { themeActive }</a></li>
-                <li><a style={{color: letterMenu}} target="_blank" href={ linkedin }>CONTACT ME</a></li>
+                <li><a className={letterMenu} onClick={ () => dispatch( handleSong() ) } href="#">SOUND: { templateSound }</a></li>
+                <li onClick={ () => dispatch( handleTheme() ) }><a className={letterMenu} href="#">THEME: { themeActive }</a></li>
+                <li><a className={letterMenu} target="_blank" href={ linkedin }>CONTACT ME</a></li>
             </nav>
             <img src={ imgMenuAuth } alt="Menu"/>
         </div>

@@ -13,17 +13,17 @@ export const MenuChat = () => {
     const { theme } = useSelector( state => state.theme );
     const { isPlaying } = useSelector( state => state.song );
     const dispatch = useDispatch();
-    const { letterMenu } = useTheme()
 
     let themeActive = theme === 'Dark' ? 'DARK' : 'LIGHT';
     let templateSound = isPlaying ? 'ON' : 'OFF'
+    let letterMenu = theme === 'Dark' ? 'white' : 'blue'
 
     return (
         <div className="menu">
             <nav>
-                <li><a style={{color: letterMenu}}  onClick={ () => dispatch( handleSong() ) } href="#">SOUND: { templateSound }</a></li>
-                <li onClick={() => dispatch( handleTheme() ) }><a style={{color: letterMenu}}   href="#">THEME: { themeActive }</a></li>
-                <li ><a style={{color: letterMenu}}  target="_blank" href={ linkedin }>CONTACT ME</a></li>
+                <li><a className={letterMenu}  onClick={ () => dispatch( handleSong() ) } href="#">SOUND: { templateSound }</a></li>
+                <li onClick={() => dispatch( handleTheme() ) }><a className={letterMenu} href="#">THEME: { themeActive }</a></li>
+                <li ><a className={letterMenu}   target="_blank" href={ linkedin }>CONTACT ME</a></li>
                 <li id="logout" onClick={ () => dispatch( onLogout() ) }><a>LOGOUT</a></li>
             </nav>
             <img src={ imgMenu } alt="Menu"/>

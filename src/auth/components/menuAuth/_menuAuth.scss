@@ -19,7 +19,7 @@
       background-color: c.$white;
 
       a {
-        color: black!important;
+        color: black;
       }
     }
 
@@ -27,6 +27,14 @@
       padding: 0 .5em;
       transition: all 500ms linear;
       list-style: none;
+
+      .white {
+        color: c.$white
+      }
+
+      .blue {
+        color: c.$blue;
+      }
 
       a {
         transition: all 500ms linear;
