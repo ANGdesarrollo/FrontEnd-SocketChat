@@ -23,7 +23,7 @@ export const SuccessMessage = ( { path, data } ) => {
             } else {
                 navigate( path )
             }
-        }, 5000000 )
+        }, 5000 )
     }, [] )
 
     return (
