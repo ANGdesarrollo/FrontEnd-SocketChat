@@ -10,19 +10,19 @@
     width: 100%;
   }
 
-  //@keyframes rocket {
-  //  0% {
-  //    left: -20%;
-  //    bottom: -20%;
-  //  }
-  //
-  //  100% {
-  //    left: 50%;
-  //    transform: translateX(-50%) translateY(50%);
-  //    bottom: 50%;
-  //  }
-  //
-  //}
+  @keyframes rocket {
+    0% {
+      left: -20%;
+      bottom: -20%;
+    }
+
+    100% {
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+      bottom: 50%;
+    }
+
+  }
 }
 
 @media screen and (max-width: 992px) {
