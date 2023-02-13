@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { useSelector } from "react-redux";
+import darkTheme from '../../../public/videos/dark.mp4';
+import lightTheme from '../../../public/videos/light.mp4';
 import { useTheme } from "../../hooks/useTheme/useTheme.js";
-
-const darkTheme = 'https://res.cloudinary.com/dwz16rstr/video/upload/v1671584240/chat/Estrellas_-_82360_1_cizubt.mp4'
-const lightTheme = 'https://res.cloudinary.com/dwz16rstr/video/upload/v1675364844/chat/Terreno_-_66975_jznvz7.mp4'
 
 export const VideoBackground = () => {
     const { animationTheme, theme } = useTheme();
