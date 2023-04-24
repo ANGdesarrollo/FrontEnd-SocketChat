@@ -34,4 +34,4 @@ export const useAxiosPost = ( url ) => {
         chatApiPost,
         statePost
     }
-};
+}

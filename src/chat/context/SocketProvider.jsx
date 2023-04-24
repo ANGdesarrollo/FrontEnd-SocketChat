@@ -13,17 +13,15 @@ export const SocketsProvider = ( { children } ) => {
     }, [] );
 
     socket.on( "receive_msg", ( data ) => {
-        setAllMessages( [ ...allMessages, data ] )
+        setAllMessages( [ ...allMessages, data ] );
     } );
 
     const sendMessage = ( data ) => {
-        socket.emit( 'send_msg', data )
+        socket.emit( 'send_msg', data );
     }
 
     return (
-        <SocketContext.Provider value={ {
-            allMessages,
-            sendMessage
+        <SocketContext.Provider value={ { allMessages, sendMessage
         } }>
             { children }
         </SocketContext.Provider>

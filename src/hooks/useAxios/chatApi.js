@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { API_URL } from "../../config/configAPI.js";
+import { API_URL } from "../../../../../Chat/Front-End-2/src/config/configAPI.js";
 
 Axios.defaults.withCredentials = true;
 

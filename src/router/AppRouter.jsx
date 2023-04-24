@@ -24,7 +24,6 @@ export const AppRouter = () => {
     return (
         <SocketsProvider>
             <Routes>
-
                 <Route element={<CheckerRoute/>}>
                     <Route path="/" element={<Checker/>}></Route>
                 </Route>

@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 export const CheckerRoute = () => {
     const {  done, status } = useSelector( state => state.auth );
 
-
     if(done && status) {
         return <Navigate to="/chat"/>
     }

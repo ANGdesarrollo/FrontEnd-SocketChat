@@ -5,6 +5,7 @@ import { Music } from "./components/music/Music.jsx";
 import { DesignedBy } from "./components/designedBy/DesignedBy";
 
 export const App = () => {
+
     return (
         <>
             <VideoBackground/>

@@ -6,7 +6,7 @@ export const useAxiosGet = (url) => {
         data: null,
         isLoading: false,
         hasError: null,
-    })
+    });
 
     const chatApiGet = async() => {
         try {
@@ -34,3 +34,5 @@ export const useAxiosGet = (url) => {
         stateGet
     }
 };
+
+

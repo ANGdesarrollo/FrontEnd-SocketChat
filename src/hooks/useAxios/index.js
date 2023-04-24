@@ -1,3 +1,3 @@
-export * from './useAxiosGet';
-export * from './useAxiosDelete';
-export * from './useAxiosPost';
+export * from './useAxiosGet.js';
+export * from './useAxiosDelete.js';
+export * from './useAxiosPost.js';
